@@ -1,4 +1,4 @@
-# SpaceX Launch Dashboard
+# SpaceX Launch Streamlit in Snowflake Data App
 
 This is a **Streamlit in Snowflake** data application that visualizes SpaceX launch data using **the Snowflake Data Cloud** as the backend. The application provides an interactive UI that allows users to explore launch statistics, including launch site analysis, rocket usage, and launch timelines.
 
