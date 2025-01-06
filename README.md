@@ -1,6 +1,6 @@
 # SpaceX Launch Dashboard
 
-This is a **Streamlit** web application that visualizes SpaceX launch data using **Snowflake** as the backend. The application provides an interactive dashboard that allows users to explore launch statistics, including launch site analysis, rocket usage, and launch timelines.
+This is a **Streamlit in Snowflake** data application that visualizes SpaceX launch data using **the Snowflake Data Cloud** as the backend. The application provides an interactive UI that allows users to explore launch statistics, including launch site analysis, rocket usage, and launch timelines.
 
 ## Features
 
@@ -10,7 +10,17 @@ This is a **Streamlit** web application that visualizes SpaceX launch data using
 - **Launch Timeline**: Displays a line chart visualizing the number of launches over time.
 - **Interactive Filters**: Allows users to filter data by Mission Name, Launch Site, and Rocket.
 
+## Attribution
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SpaceX-Logo-Xonly.svg/2560px-SpaceX-Logo-Xonly.svg.png" alt="SpaceX Logo" width="200"/>
+
+A Fivetran custom connector built using the Fivetran Connector SDK uses the SpaceX API to source this dataset. While attribution is not required, we acknowledge SpaceX as the data source.
+
+For more information about the SpaceX API, please visit:
+[SpaceX API Documentation](https://github.com/r-spacex/SpaceX-API)
+
 ## Requirements
+
+Here is the link to the [Fivetran Connector SDK SpaceX quick start example](https://github.com/kellykohlleffel/Fivetran_Connector_SDK/tree/main/examples/quick_start_examples/spacex).
 
 To run this application, ensure the following dependencies are installed:
 
@@ -26,9 +36,9 @@ You can install the required Python packages with the following command:
 pip install streamlit pandas altair snowflake-snowpark-python
 ```
 
-## Streamlit in Snowflake SpaceX Dashboard
+## Streamlit in Snowflake SpaceX Data App
 ```
-# SpaceX Launch Dashboard
+# SpaceX Launch Data Application
 # A Streamlit in Snowflake application visualizing SpaceX launch data.
 # Features: Launch counts, launch site analysis, rocket usage, and launch timelines.
 
@@ -38,7 +48,7 @@ import altair as alt
 from snowflake.snowpark.context import get_active_session
 
 # Set page configuration
-st.set_page_config(page_title="SpaceX Launch Dashboard", layout="wide")
+st.set_page_config(page_title="SpaceX Launch Data App", layout="wide")
 
 # Get the active Snowflake session
 session = get_active_session()
@@ -106,7 +116,7 @@ try:
         timeline = launch_timeline()
 
     # Dashboard Title
-    st.title("🚀 SpaceX Launch Dashboard")
+    st.title("🚀 SpaceX Launch Data App")
 
     # Add spacing below the title
     st.markdown("<div style='margin-bottom: 40px;'></div>", unsafe_allow_html=True)
@@ -213,3 +223,4 @@ except Exception as e:
     st.error(f"An error occurred: {str(e)}")
 ```
  
+![Streamlit in Snowflake SpaceX App](images/spacex_streamlit_app.png)
