@@ -37,7 +37,7 @@ pip install streamlit pandas altair snowflake-snowpark-python
 ```
 
 ## Streamlit in Snowflake SpaceX Data App
-```
+```python
 # SpaceX Launch Data Application
 # A Streamlit in Snowflake application visualizing SpaceX launch data.
 # Features: Launch counts, launch site analysis, rocket usage, and launch timelines.
